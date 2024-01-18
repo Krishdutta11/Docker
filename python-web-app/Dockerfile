@@ -8,7 +8,7 @@ WORKDIR /app
 COPY requirements.txt /app
 
 # Install any needed packages specified in requirements.txt
-RUN pip3 install requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the 'devops' directory into the container at /app
 COPY devops /app
